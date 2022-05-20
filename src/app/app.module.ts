@@ -7,21 +7,24 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { MessagesComponent } from './messages/messages.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
     DashboardComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    HeroSearchComponent
   ],
   bootstrap: [ AppComponent ]
 })
